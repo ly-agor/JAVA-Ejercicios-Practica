@@ -12,13 +12,36 @@ public class Ejercicio_Practica_POO_Productos {
     //      d) Desde una clase Main, crea 3 productos y muestra su información.
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    Producto producto1 = new Producto("Televisión", 750, 125);
-    Producto producto2 = new Producto("Ordenador", 500, 90);
-    Producto producto3 = new Producto("Tablet", 200, 400);
+    Producto p1 = new Producto("Televisión", 750, 125);
+    Producto p2 = new Producto("Ordenador", 500, 90);
+    Producto p3 = new Producto("Tablet", 200, 400);
     
-    producto1.mostrarInfo();
-    producto2.mostrarInfo();
-    producto3.mostrarInfo();
+    p1.mostrarInfo();
+    System.out.println(" ");
+    p2.mostrarInfo();
+    System.out.println(" ");
+    p3.mostrarInfo();
+    System.out.println(" ");
+    
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // 2. Validación de setters. Modifica la clase Producto para que: 
+    //      a) precio no pueda ser negativo.
+    //      b) stock no pueda ser menor que 0.
+    //      c) Si se intenta asignar un valor inválido, el setter debe ignorarlo o asignar el mínimo permitido.
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    
+    //Comprobamos con otros productos las restricciones del apartado 2
+    Producto p4 = new Producto("Móvil", -20.5, -2);
+    Producto p5 = new Producto("Secador", 30.5, 60);
+    Producto p6 = new Producto("Smartwatch", -100, 80);
+    
+    System.out.println(" ");
+    p4.mostrarInfo();
+    System.out.println(" ");
+    p5.mostrarInfo();
+    System.out.println(" ");
+    p6.mostrarInfo();
 
     }
 }
