@@ -1,0 +1,13 @@
+Diseña un sistema de notificaciones usando polimorfismo.
+
+1. Crea una clase abstracta Notificacion con un atributo mensaje y un método abstracto enviar().
+
+2. Crea tres clases hijas que extiendan de Notificacion:
+    a) NotificacionEmail
+    b) NotificacionSMS
+    c) NotificacionPush
+Cada una debe tener un dato adicional propio (por ejemplo, correo, número de teléfono, dispositivo) y una implementación diferente del método enviar().
+
+3. Crea una clase GestorNotificaciones con un método: public void procesar(Notificacion n); que simplemente llame a n.enviar().
+
+4. En una clase Main, crea una colección (array o ArrayList) de notificaciones de distintos tipos y haz que el gestor las procese todas para demostrar el polimorfismo.
