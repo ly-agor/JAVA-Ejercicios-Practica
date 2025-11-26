@@ -10,8 +10,8 @@ public class Producto {
     //Constructor
     public Producto(String nombre, double precio, int stock){
         this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
+        this.setPrecio(precio);
+        this.setStock(stock);
     }
     
     //Getters y Setters
@@ -32,11 +32,21 @@ public class Producto {
     }
     
     public void setPrecio(double precio){
-        this.precio = precio;
+        if (precio >= 0){
+            this.precio = precio;
+        }
+        else{
+            System.out.println("Precio no válido");
+        }
     }
     
     public void setStock(int stock){
-        this.stock = stock;
+        if (stock >= 0){
+            this.stock = stock;
+        }
+        else{
+            System.out.println("Stock no válido");
+        }
     }
     
     //Método mostrarInfo()
